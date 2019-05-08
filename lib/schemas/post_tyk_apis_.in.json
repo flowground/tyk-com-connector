@@ -1,0 +1,762 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "api_id": {
+                    "type": "string"
+                },
+                "auth": {
+                    "properties": {
+                        "auth_header_name": {
+                            "type": "string"
+                        },
+                        "use_cookie": {
+                            "type": "boolean"
+                        },
+                        "use_param": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "definition": {
+                    "properties": {
+                        "key": {
+                            "type": "string"
+                        },
+                        "location": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "enable_jwt": {
+                    "type": "boolean"
+                },
+                "enable_signature_checking": {
+                    "type": "boolean"
+                },
+                "hmac_allowed_clock_skew": {
+                    "type": "number"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "jwt_identity_base_field": {
+                    "type": "string"
+                },
+                "jwt_policy_field_name": {
+                    "type": "string"
+                },
+                "jwt_signing_method": {
+                    "type": "string"
+                },
+                "jwt_source": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "notifications": {
+                    "properties": {
+                        "oauth_on_keychange_url": {
+                            "type": "string"
+                        },
+                        "shared_secret": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "oauth_meta": {
+                    "properties": {
+                        "allowed_access_types": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "allowed_authorize_types": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "auth_login_redirect": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "org_id": {
+                    "type": "string"
+                },
+                "slug": {
+                    "type": "string"
+                },
+                "uptime_tests": {
+                    "properties": {
+                        "CORS": {
+                            "properties": {
+                                "allow_credentials": {
+                                    "type": "boolean"
+                                },
+                                "allowed_headers": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "allowed_methods": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "allowed_origins": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "debug": {
+                                    "type": "boolean"
+                                },
+                                "enable": {
+                                    "type": "boolean"
+                                },
+                                "exposed_headers": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "max_age": {
+                                    "type": "number"
+                                },
+                                "options_passthrough": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "active": {
+                            "type": "boolean"
+                        },
+                        "allowed_ips": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        },
+                        "cache_options": {
+                            "properties": {
+                                "cache_all_safe_requests": {
+                                    "type": "boolean"
+                                },
+                                "cache_timeout": {
+                                    "type": "number"
+                                },
+                                "enable_cache": {
+                                    "type": "boolean"
+                                },
+                                "enable_upstream_cache_control": {
+                                    "type": "boolean"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "check_list": {
+                            "items": {
+                                "properties": {
+                                    "body": {
+                                        "type": "string"
+                                    },
+                                    "headers": {
+                                        "items": {
+                                            "type": "object"
+                                        },
+                                        "type": "array"
+                                    },
+                                    "method": {
+                                        "type": "string"
+                                    },
+                                    "url": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "config": {
+                            "properties": {
+                                "expire_utime_after": {
+                                    "type": "number"
+                                },
+                                "recheck_wait": {
+                                    "type": "number"
+                                },
+                                "service_discovery": {
+                                    "properties": {
+                                        "cache_timeout": {
+                                            "type": "number"
+                                        },
+                                        "data_path": {
+                                            "type": "string"
+                                        },
+                                        "endpoint_returns_list": {
+                                            "type": "boolean"
+                                        },
+                                        "parent_data_path": {
+                                            "type": "string"
+                                        },
+                                        "port_data_path": {
+                                            "type": "string"
+                                        },
+                                        "query_endpoint": {
+                                            "type": "string"
+                                        },
+                                        "use_discovery_service": {
+                                            "type": "string"
+                                        },
+                                        "use_nested_query": {
+                                            "type": "boolean"
+                                        },
+                                        "use_target_list": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "custom_middleware": {
+                            "properties": {
+                                "post": {
+                                    "items": {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "path": {
+                                                "type": "string"
+                                            },
+                                            "require_session": {
+                                                "type": "boolean"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "pre": {
+                                    "items": {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "path": {
+                                                "type": "string"
+                                            },
+                                            "require_session": {
+                                                "type": "boolean"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                },
+                                "response": {
+                                    "items": {
+                                        "properties": {
+                                            "name": {
+                                                "type": "string"
+                                            },
+                                            "path": {
+                                                "type": "string"
+                                            },
+                                            "require_session": {
+                                                "type": "boolean"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "do_not_track": {
+                            "type": "string"
+                        },
+                        "domain": {
+                            "type": "string"
+                        },
+                        "dont_set_quota_on_create": {
+                            "type": "boolean"
+                        },
+                        "enable_batch_request_support": {
+                            "type": "boolean"
+                        },
+                        "enable_ip_whitelisting": {
+                            "type": "boolean"
+                        },
+                        "event_handlers": {
+                            "type": "object"
+                        },
+                        "expire_analytics_after": {
+                            "type": "number"
+                        },
+                        "proxy": {
+                            "properties": {
+                                "check_host_against_uptime_tests": {
+                                    "type": "boolean"
+                                },
+                                "enable_load_balancing": {
+                                    "type": "boolean"
+                                },
+                                "listen_path": {
+                                    "type": "string"
+                                },
+                                "preserve_host_header": {
+                                    "type": "boolean"
+                                },
+                                "service_discovery": {
+                                    "properties": {
+                                        "cache_timeout": {
+                                            "type": "number"
+                                        },
+                                        "data_path": {
+                                            "type": "string"
+                                        },
+                                        "endpoint_returns_list": {
+                                            "type": "boolean"
+                                        },
+                                        "parent_data_path": {
+                                            "type": "string"
+                                        },
+                                        "port_data_path": {
+                                            "type": "string"
+                                        },
+                                        "query_endpoint": {
+                                            "type": "string"
+                                        },
+                                        "use_discovery_service": {
+                                            "type": "string"
+                                        },
+                                        "use_nested_query": {
+                                            "type": "boolean"
+                                        },
+                                        "use_target_list": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "type": "object"
+                                },
+                                "strip_listen_path": {
+                                    "type": "boolean"
+                                },
+                                "target_list": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "type": "array"
+                                },
+                                "target_url": {
+                                    "type": "string"
+                                }
+                            },
+                            "type": "object"
+                        },
+                        "response_processors": {
+                            "items": {
+                                "properties": {
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "options": {
+                                        "type": "object"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "array"
+                        },
+                        "session_lifetime": {
+                            "type": "number"
+                        },
+                        "tags": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                },
+                "use_basic_auth": {
+                    "type": "boolean"
+                },
+                "use_keyless": {
+                    "type": "boolean"
+                },
+                "use_oauth2": {
+                    "type": "boolean"
+                },
+                "version_data": {
+                    "properties": {
+                        "not_versioned": {
+                            "type": "boolean"
+                        },
+                        "versions": {
+                            "additionalProperties": {
+                                "properties": {
+                                    "expires": {
+                                        "type": "string"
+                                    },
+                                    "extended_paths": {
+                                        "properties": {
+                                            "black_list": {
+                                                "items": {
+                                                    "properties": {
+                                                        "method_actions": {
+                                                            "additionalProperties": {
+                                                                "properties": {
+                                                                    "action": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "code": {
+                                                                        "type": "number"
+                                                                    },
+                                                                    "data": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "headers": {
+                                                                        "type": "object"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "type": "object"
+                                                        },
+                                                        "path": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "cache": {
+                                                "items": {
+                                                    "type": "string"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "circuit_breakers": {
+                                                "items": {
+                                                    "properties": {
+                                                        "method": {
+                                                            "type": "string"
+                                                        },
+                                                        "path": {
+                                                            "type": "string"
+                                                        },
+                                                        "return_to_service_after": {
+                                                            "type": "number"
+                                                        },
+                                                        "samples": {
+                                                            "type": "number"
+                                                        },
+                                                        "threshold_percent": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "hard_timeouts": {
+                                                "items": {
+                                                    "properties": {
+                                                        "method": {
+                                                            "type": "string"
+                                                        },
+                                                        "path": {
+                                                            "type": "string"
+                                                        },
+                                                        "timeout": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "ignored": {
+                                                "items": {
+                                                    "properties": {
+                                                        "method_actions": {
+                                                            "additionalProperties": {
+                                                                "properties": {
+                                                                    "action": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "code": {
+                                                                        "type": "number"
+                                                                    },
+                                                                    "data": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "headers": {
+                                                                        "type": "object"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "type": "object"
+                                                        },
+                                                        "path": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "size_limits": {
+                                                "items": {
+                                                    "properties": {
+                                                        "method": {
+                                                            "type": "string"
+                                                        },
+                                                        "path": {
+                                                            "type": "string"
+                                                        },
+                                                        "size_limit": {
+                                                            "type": "number"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "transform": {
+                                                "items": {
+                                                    "properties": {
+                                                        "method": {
+                                                            "type": "string"
+                                                        },
+                                                        "path": {
+                                                            "type": "string"
+                                                        },
+                                                        "template_data": {
+                                                            "properties": {
+                                                                "enable_session": {
+                                                                    "type": "boolean"
+                                                                },
+                                                                "input_type": {
+                                                                    "type": "string"
+                                                                },
+                                                                "template_mode": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "transform_headers": {
+                                                "items": {
+                                                    "properties": {
+                                                        "add_headers": {
+                                                            "type": "object"
+                                                        },
+                                                        "delete_headers": {
+                                                            "items": {
+                                                                "type": "string"
+                                                            },
+                                                            "type": "array"
+                                                        },
+                                                        "method": {
+                                                            "type": "string"
+                                                        },
+                                                        "path": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "transform_response": {
+                                                "items": {
+                                                    "properties": {
+                                                        "method": {
+                                                            "type": "string"
+                                                        },
+                                                        "path": {
+                                                            "type": "string"
+                                                        },
+                                                        "template_data": {
+                                                            "properties": {
+                                                                "enable_session": {
+                                                                    "type": "boolean"
+                                                                },
+                                                                "input_type": {
+                                                                    "type": "string"
+                                                                },
+                                                                "template_mode": {
+                                                                    "type": "string"
+                                                                }
+                                                            },
+                                                            "type": "object"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "transform_response_headers": {
+                                                "items": {
+                                                    "properties": {
+                                                        "add_headers": {
+                                                            "type": "object"
+                                                        },
+                                                        "delete_headers": {
+                                                            "items": {
+                                                                "type": "string"
+                                                            },
+                                                            "type": "array"
+                                                        },
+                                                        "method": {
+                                                            "type": "string"
+                                                        },
+                                                        "path": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "url_rewrites": {
+                                                "items": {
+                                                    "properties": {
+                                                        "match_pattern": {
+                                                            "type": "string"
+                                                        },
+                                                        "method": {
+                                                            "type": "string"
+                                                        },
+                                                        "path": {
+                                                            "type": "string"
+                                                        },
+                                                        "rewrite_to": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "virtual": {
+                                                "items": {
+                                                    "properties": {
+                                                        "function_source_type": {
+                                                            "type": "string"
+                                                        },
+                                                        "function_source_uri": {
+                                                            "type": "string"
+                                                        },
+                                                        "method": {
+                                                            "type": "string"
+                                                        },
+                                                        "path": {
+                                                            "type": "string"
+                                                        },
+                                                        "response_function_name": {
+                                                            "type": "string"
+                                                        },
+                                                        "use_session": {
+                                                            "type": "boolean"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            },
+                                            "white_list": {
+                                                "items": {
+                                                    "properties": {
+                                                        "method_actions": {
+                                                            "additionalProperties": {
+                                                                "properties": {
+                                                                    "action": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "code": {
+                                                                        "type": "number"
+                                                                    },
+                                                                    "data": {
+                                                                        "type": "string"
+                                                                    },
+                                                                    "headers": {
+                                                                        "type": "object"
+                                                                    }
+                                                                },
+                                                                "type": "object"
+                                                            },
+                                                            "type": "object"
+                                                        },
+                                                        "path": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "type": "object"
+                                                },
+                                                "type": "array"
+                                            }
+                                        },
+                                        "type": "object"
+                                    },
+                                    "global_headers": {
+                                        "type": "object"
+                                    },
+                                    "global_headers_remove": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    },
+                                    "global_size_limit": {
+                                        "type": "number"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "override_target": {
+                                        "type": "string"
+                                    },
+                                    "use_extended_paths": {
+                                        "type": "boolean"
+                                    }
+                                },
+                                "type": "object"
+                            },
+                            "type": "object"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

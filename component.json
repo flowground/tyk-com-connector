@@ -1,0 +1,339 @@
+{
+    "title": "Gateway",
+    "docsUrl": "",
+    "url": "https://api.apis.guru/v2/specs/tyk.com/1.9/swagger.json",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "https://tyk.local/",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_tyk_apis_": {
+            "main": "./lib/actions/get_tyk_apis_.js",
+            "title": "Gets a list of *API Definition* objects that are currently live on the gateway \n",
+            "description": "Gets a list of *API Definition* objects that are currently live on the gateway \n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_tyk_apis_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_tyk_apis_": {
+            "main": "./lib/actions/post_tyk_apis_.js",
+            "title": "Create an *API Definition* object\n",
+            "description": "Create an *API Definition* object\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_tyk_apis_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_tyk_apis__apiID_": {
+            "main": "./lib/actions/delete_tyk_apis__apiID_.js",
+            "title": "Deletes an *API Definition* object, if it exists\n",
+            "description": "Deletes an *API Definition* object, if it exists\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_tyk_apis__apiID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_tyk_apis__apiID_": {
+            "main": "./lib/actions/get_tyk_apis__apiID_.js",
+            "title": "Gets an *API Definition* object, if it exists\n",
+            "description": "Gets an *API Definition* object, if it exists\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_tyk_apis__apiID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_tyk_apis__apiID_": {
+            "main": "./lib/actions/put_tyk_apis__apiID_.js",
+            "title": "Updates an *API Definition* object, if it exists\n",
+            "description": "Updates an *API Definition* object, if it exists\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_tyk_apis__apiID_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_tyk_health_": {
+            "main": "./lib/actions/get_tyk_health_.js",
+            "title": "Gets the health check values for an API if it is being recorded\n",
+            "description": "Gets the health check values for an API if it is being recorded\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_tyk_health_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_tyk_keys_": {
+            "main": "./lib/actions/get_tyk_keys_.js",
+            "title": "Gets a list of *key* IDs (will only work with non-hashed installations)\n",
+            "description": "Gets a list of *key* IDs (will only work with non-hashed installations)\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_tyk_keys_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_tyk_keys_create": {
+            "main": "./lib/actions/post_tyk_keys_create.js",
+            "title": "Create a new *API token* with the *session object* defined in the body\n",
+            "description": "Create a new *API token* with the *session object* defined in the body\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_tyk_keys_create.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_tyk_keys__keyId_": {
+            "main": "./lib/actions/delete_tyk_keys__keyId_.js",
+            "title": "Remove this *API token* from the gateway, this will completely destroy the token and metadata associated with the token and instantly stop access from being granted\n",
+            "description": "Remove this *API token* from the gateway, this will completely destroy the token and metadata associated with the token and instantly stop access from being granted\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_tyk_keys__keyId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_tyk_keys__keyId_": {
+            "main": "./lib/actions/post_tyk_keys__keyId_.js",
+            "title": "Add a pre-specified *API token* with the *session object* defined in the body, this operatin creates a custom token that dsoes not use the gateway naming convention for tokens\n",
+            "description": "Add a pre-specified *API token* with the *session object* defined in the body, this operatin creates a custom token that dsoes not use the gateway naming convention for tokens\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_tyk_keys__keyId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_tyk_keys__keyId_": {
+            "main": "./lib/actions/put_tyk_keys__keyId_.js",
+            "title": "Update an *API token* with the *session object* defined in the body, this operatin overwrites the existing object\n",
+            "description": "Update an *API token* with the *session object* defined in the body, this operatin overwrites the existing object\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_tyk_keys__keyId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_tyk_oauth_authorize_client_": {
+            "main": "./lib/actions/post_tyk_oauth_authorize_client_.js",
+            "title": "The final request from an authorising party for a redirect URI during the Tyk OAuth flow\n",
+            "description": "The final request from an authorising party for a redirect URI during the Tyk OAuth flow\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_tyk_oauth_authorize_client_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_tyk_oauth_clients_create": {
+            "main": "./lib/actions/post_tyk_oauth_clients_create.js",
+            "title": "Create a new OAuth client\n",
+            "description": "Create a new OAuth client\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_tyk_oauth_clients_create.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_tyk_oauth_clients__apiId_": {
+            "main": "./lib/actions/get_tyk_oauth_clients__apiId_.js",
+            "title": "Get a list of OAuth clients bound to this back end \n",
+            "description": "Get a list of OAuth clients bound to this back end \n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_tyk_oauth_clients__apiId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_tyk_oauth_clients__apiId___clientId_": {
+            "main": "./lib/actions/delete_tyk_oauth_clients__apiId___clientId_.js",
+            "title": "Delete the OAuth client\n",
+            "description": "Delete the OAuth client\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_tyk_oauth_clients__apiId___clientId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_tyk_oauth_refresh__keyId_": {
+            "main": "./lib/actions/delete_tyk_oauth_refresh__keyId_.js",
+            "title": "Invalidate a refresh token\n",
+            "description": "Invalidate a refresh token\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_tyk_oauth_refresh__keyId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_tyk_reload_": {
+            "main": "./lib/actions/get_tyk_reload_.js",
+            "title": "Will reload the targetted gateway\n",
+            "description": "Will reload the targetted gateway\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_tyk_reload_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_tyk_reload_group": {
+            "main": "./lib/actions/get_tyk_reload_group.js",
+            "title": "Will reload the cluster via the targeted gateway\n",
+            "description": "Will reload the cluster via the targeted gateway\n",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_tyk_reload_group.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

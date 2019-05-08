@@ -1,0 +1,124 @@
+{
+    "type": "object",
+    "properties": {
+        "keyId": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "properties": {
+                "access_rights": {
+                    "additionalProperties": {
+                        "properties": {
+                            "api_id": {
+                                "type": "string"
+                            },
+                            "api_name": {
+                                "type": "string"
+                            },
+                            "versions": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "object"
+                },
+                "allowance": {
+                    "type": "number"
+                },
+                "apply_policy_id": {
+                    "type": "string"
+                },
+                "basic_auth_data": {
+                    "properties": {
+                        "hash_type": {
+                            "enum": [
+                                "",
+                                "bcrypt"
+                            ],
+                            "type": "string"
+                        },
+                        "password": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "expires": {
+                    "type": "number"
+                },
+                "hmac_enabled": {
+                    "type": "boolean"
+                },
+                "hmac_string": {
+                    "type": "string"
+                },
+                "is_inactive": {
+                    "type": "boolean"
+                },
+                "jwt_data": {
+                    "properties": {
+                        "secret": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "meta_data": {
+                    "type": "object"
+                },
+                "monitor": {
+                    "properties": {
+                        "trigger_limits": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                },
+                "oauth_client_id": {
+                    "type": "string"
+                },
+                "org_id": {
+                    "type": "string"
+                },
+                "per": {
+                    "type": "number"
+                },
+                "quota_max": {
+                    "type": "number"
+                },
+                "quota_remaining": {
+                    "type": "number"
+                },
+                "quota_renewal_rate": {
+                    "type": "string"
+                },
+                "quota_renews": {
+                    "type": "number"
+                },
+                "rate": {
+                    "type": "number"
+                },
+                "tags": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "x_tyk_authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

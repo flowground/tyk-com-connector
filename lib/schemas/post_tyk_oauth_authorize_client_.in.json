@@ -1,0 +1,38 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "type": "object",
+            "properties": {
+                "response_type": {
+                    "description": "Should be provided by requesting client as part of authorisation request, this should be either `code` or `token` depending on the methods you have specified for the API",
+                    "type": "string",
+                    "format": "string"
+                },
+                "client_id": {
+                    "description": "Should be provided by requesting client as part of authorisation request. The Client ID that is making the request",
+                    "type": "string",
+                    "format": "string"
+                },
+                "redirect_uri": {
+                    "description": "Should be provided by requesting client as part of authorisation request. Must match with the record stored with Tyk",
+                    "type": "string",
+                    "format": "string"
+                },
+                "key_rules": {
+                    "description": "A string representation of a *Session Object (form-encoded)*. This should be provided by your application in order to apply any quotas or rules to the key",
+                    "type": "string",
+                    "format": "string"
+                }
+            },
+            "required": [
+                "response_type"
+            ]
+        },
+        "x_tyk_authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

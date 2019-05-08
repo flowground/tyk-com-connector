@@ -1,0 +1,18 @@
+{
+    "type": "object",
+    "properties": {
+        "keyId": {
+            "required": true,
+            "type": "string"
+        },
+        "apiID": {
+            "required": true,
+            "type": "string"
+        },
+        "x_tyk_authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

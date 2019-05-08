@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "apiId": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "clientId": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        },
+        "x_tyk_authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "properties": {
+                "api_id": {
+                    "type": "string"
+                },
+                "redirect_uri": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "x_tyk_authorization": {
+            "required": true,
+            "type": "string",
+            "format": "string"
+        }
+    }
+}
